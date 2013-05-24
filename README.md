@@ -1,4 +1,4 @@
-# Graze\SignedRequest #
+# SignedRequest #
 
 
 **Version:** *0.1.0*<br/>
