@@ -9,7 +9,7 @@ Simple library for signing requests to our web services.
 
 ### Usage ###
 
-Requests made to our web services requires your parameters to be signed.
+Requests made to our web services require your parameters to be signed.
 With this library, we provide you with an easy way to generate the signature.
 
 ```php
