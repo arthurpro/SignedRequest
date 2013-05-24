@@ -1,0 +1,34 @@
+{
+    "name": "graze/signed-request",
+    "description": "Simple request signing",
+    "keywords": ["api", "request", "secret", "signed", "signed-request"],
+    "homepage": "https://github.com/graze/SignedRequest",
+
+    "version": "0.1.0",
+
+    "license": "MIT",
+    "type": "library",
+
+    "authors": [
+        {
+            "name": "Andrew Lawson",
+            "email": "andrew.lawson@graze.com",
+            "homepage": "http://graze.com"
+        }
+    ],
+
+    "autoload": {
+        "files": [
+            "./lib/Graze/SignedRequest/Sign.php",
+            "./lib/Graze/SignedRequest/Validate.php"
+        ]
+    },
+
+    "require": {
+        "php": ">=5.3.3"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "~3.7.0"
+    }
+}
