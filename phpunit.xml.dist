@@ -1,22 +1,17 @@
 <phpunit bootstrap="./vendor/autoload.php" colors="true">
-    <testsuites>
 
-        <!-- Unit test suite -->
+    <!-- Test suites -->
+    <testsuites>
         <testsuite name="unit">
             <directory suffix="Test.php">./test</directory>
         </testsuite>
-
-
     </testsuites>
 
     <!-- Coverage filter -->
     <filter>
         <whitelist>
-            <directory>./</directory>
-            <exclude>
-                <directory>./test</directory>
-                <directory>./vendor</directory>
-            </exclude>
+            <directory>./lib</directory>
         </whitelist>
     </filter>
+
 </phpunit>

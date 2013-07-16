@@ -2,9 +2,18 @@
 
 
 **Version:** *0.1.0*<br/>
+**Master build:** [![Master branch build status][travis-master]][travis]
 
 
-Simple library for signing requests to our web services.
+Simple library for signing requests to our web services. It can be installed in whichever
+way you prefer, but we recommend [Composer][packagist].
+```json
+{
+    "require": {
+        "graze/signed-request": "~0.1.0"
+    }
+}
+```
 
 
 ### Usage ###
@@ -67,4 +76,7 @@ You can find a copy of this license at http://www.opensource.org/licenses/mit
 
 
 <!-- Links -->
+[travis]: https://travis-ci.org/graze/SignedRequest
+[travis-master]: https://travis-ci.org/graze/SignedRequest.png?branch=master
+[packagist]: https://packagist.org/packages/graze/signed-request
 [vagrant]: http://vagrantup.com
