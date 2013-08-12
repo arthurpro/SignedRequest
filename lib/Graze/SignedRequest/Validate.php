@@ -29,6 +29,7 @@ function validate($secret, array $parameters, $key = 'signature')
 
     $sig = $parameters[$key];
     unset($parameters[$key]);
+    $resign = sign($secret, $parameters, $key);
 
-    return sign($secret, $parameters) === $sig;
+    return $resign[$key] === $sig;
 }

@@ -18,11 +18,17 @@ namespace Graze\SignedRequest;
  *
  * @param string $secret
  * @param array $parameters
- * @return string
+ * @param string $key
+ * @return array
  */
-function sign($secret, array $parameters)
+function sign($secret, array $parameters, $key = 'signature')
 {
-    ksort($parameters);
+    if (isset($parameters[$key])) {
+        return $parameters;
+    }
 
-    return sha1($secret . ':' . http_build_query($parameters));
+    ksort($parameters);
+    $parameters[$key] = sha1($secret . ':' . http_build_query($parameters));
+
+    return $parameters;
 }
