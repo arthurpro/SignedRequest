@@ -7,3 +7,6 @@ before_script:
   - php composer.phar install --dev --prefer-source
 
 script: make tests
+
+notifications:
+  email: false
