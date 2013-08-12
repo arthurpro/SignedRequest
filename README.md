@@ -1,16 +1,20 @@
 # SignedRequest #
 
 
-**Version:** *0.1.0*<br/>
+**Version:** *0.2.0*<br/>
 **Master build:** [![Master branch build status][travis-master]][travis]
 
 
-Simple library for signing requests to our web services. It can be installed in whichever
+Simple library for signing HTTP requests to your internal services.
+This library *should not* be used to sign requests to publicly accessible resources.
+For public APIs, we recommend [Hawk][hawk] or similar.
+
+It can be installed in whichever
 way you prefer, but we recommend [Composer][packagist].
 ```json
 {
     "require": {
-        "graze/signed-request": "~0.1.0"
+        "graze/signed-request": "~0.2.0"
     }
 }
 ```
@@ -28,9 +32,7 @@ $secret = 'banana';
 $params = array('id' => 123);
 $signed = Graze\SignedRequest\sign($secret, $params);
 
-$params['signature'] = $signed;
-
-// Send request with $params
+// Send request with $signed
 ```
 
 Validation is also included, but as a client you won't need to use it.
@@ -58,12 +60,10 @@ $ make tests
 ```
 
 If you have [Vagrant][vagrant] installed, you can build our dev environment to assist development.
-The Vagrant setup comes with multiple PHP environments to be able to work and test on relevant versions,
-so you must specify which version you want to setup and SSH into.
 The repository will be mounted in `/srv`.
 ```bash
-$ vagrant up  [v53|v54]
-$ vagrant ssh [v53|v54]
+$ vagrant up
+$ vagrant ssh
 
 Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
 $ cd /srv
@@ -80,3 +80,4 @@ You can find a copy of this license at http://www.opensource.org/licenses/mit
 [travis-master]: https://travis-ci.org/graze/SignedRequest.png?branch=master
 [packagist]: https://packagist.org/packages/graze/signed-request
 [vagrant]: http://vagrantup.com
+[hawk]: https://github.com/hueniverse/hawk
