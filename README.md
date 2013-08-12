@@ -47,7 +47,6 @@ $secret = 'banana';
 if (Graze\SignedRequest\validate($secret, $params)) {
     // Request is valid
 }
-
 ```
 
 
