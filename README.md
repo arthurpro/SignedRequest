@@ -2,7 +2,8 @@
 
 
 **Version:** *0.2.0*<br/>
-**Master build:** [![Master branch build status][travis-master]][travis]
+**Master build:** [![Master branch build status][travis-master]][travis]<br/>
+**Develop build:** [![Develop branch build status][travis-develop]][travis]
 
 
 Simple library for signing HTTP requests to your internal services.
@@ -77,6 +78,7 @@ You can find a copy of this license at http://www.opensource.org/licenses/mit
 <!-- Links -->
 [travis]: https://travis-ci.org/graze/SignedRequest
 [travis-master]: https://travis-ci.org/graze/SignedRequest.png?branch=master
+[travis-develop]: https://travis-ci.org/graze/SignedRequest.png?branch=develop
 [packagist]: https://packagist.org/packages/graze/signed-request
 [vagrant]: http://vagrantup.com
 [hawk]: https://github.com/hueniverse/hawk
